@@ -18,35 +18,35 @@
       </div>
       <div class="row">
         <div class="col-md-4 col-sm-4">
-
+          <div class="form1-header"><center><h3>Pick a size</h3></center></div>
           <form id="size">
-            <h3>Pick a size</h3>
+
             <div class="radio">
               <label><input type="radio" name="size" value="2" checked>Not hungry but would like a pizza anyways, 10 inches diameter
               </label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="size" value="3" checked>A meal for me, 16 inches diameter
+              <label><input type="radio" name="size" value="2.25" checked>A meal for me, 16 inches diameter
               </label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="size" value="4" checked>My friend and I love pizza, 24 inches diameter
+              <label><input type="radio" name="size" value="2.5" checked>My friend and I love pizza, 24 inches diameter
               </label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="size" value="5" checked>Pizza is love, 30 inches diameter
+              <label><input type="radio" name="size" value="2.75" checked>Pizza is love, 30 inches diameter
               </label>
             </div>
             <div class="radio">
-              <label><input type="radio" name="size" value="6" checked>Pizza is life, 48 inches diameter
+              <label><input type="radio" name="size" value="3" checked>Pizza is life, 48 inches diameter
               </label>
             </div>
-            <button type="submit" class="btn btn-danger" id="size_button">Got it!</button>
+            <button type="submit" class="btn btn-danger" id="size_button">Next</button>
           </form>
         </div>
 
         <div class="col-md-4 col-sm-4">
-          <h3>Is there cheese?</h3>
+          <div class="form2-header"><center><h3>Is there cheese?</h3></center></div>
           <form id="cheese">
             <div class="radio">
               <label><input type="radio" name="cheese" value="1" checked>Yes!
@@ -56,12 +56,13 @@
               <label><input type="radio" name="cheese" value="0" checked>No?
               </label>
             </div>
-            <button type="submit" class="btn btn-danger" id="Cheese_button">Next!</button>
+            <button type="button" class="btn btn-info" id="back_button1">Back</button>
+            <button type="submit" class="btn btn-danger" id="Cheese_button">Next</button>
           </form>
         </div>
 
         <div class="col-md-4 col-sm-4">
-          <h3>What goes on top of your pizza</h3>
+          <div class="form3-header"><center><h3>What goes on top of your pizza</h3></center></div>
           <form id="toppings">
             <div class="checkbox">
               <label><input type="checkbox" value="2">
@@ -88,6 +89,7 @@
                 Slice and dice chicken
               </label>
             </div>
+            <button type="button" class="btn btn-info" id="back_button2">Back</button>
             <button type="submit" class="btn btn-danger" id="toppings_button">Done!</button>
           </form>
         </div>

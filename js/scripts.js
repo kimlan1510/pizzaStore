@@ -2,6 +2,8 @@ $(document).ready(function(){
   $("form#size").submit(function(event){
     event.preventDefault();
     newPizza.Size = $("input:radio[name=size]:checked").val();
+    $("#cheese").show();
+    $("#size").hide();
     console.log(newPizza.Size);
   });
   $("form#cheese").submit(function(event){
@@ -37,16 +39,16 @@ var newPizza = new pizza("size","cheese","toppings");
 pizza.prototype.pizzaPrice = function(size, cheese, toppings){
   var price = 0;
   if(cheese === 0){
-    for(i=0; i<newPizza.Toppings.length; i++){
-      price += parseInt(newPizza.Toppings[i]);
+    for(i=0; i<toppings; i++){
+      price += parseInt(toppings[i]);
     }
-    price += parseInt(size)*price;
+    price += parseFloat(size) * price;
   }
   else{
-    for(i=0; i<newPizza.Toppings.length; i++){
-      price += parseInt(newPizza.Toppings[i]);
+    for(i=0; i<toppings.length; i++){
+      price += parseInt(toppings[i]);
     }
-    price += (parseInt(size) + 1)*price;
+    price += (parseFloat(size) + 1)*price;
   }
   return price;
 }
