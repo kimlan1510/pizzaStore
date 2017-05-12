@@ -10,7 +10,8 @@ $(document).ready(function(){
   $("form#size").submit(function(event){
     event.preventDefault();
     newPizza.Size = $("input:radio[name=size]:checked").val();
-    $("#choice_made").append
+    $("#show_size").remove();
+    $("#choice_made").append("<li id='show_size'>Pizza size: " + newPizza.showsize(  newPizza.Size) + "</li>");
     $("#cheese").show();
     $("#size").hide();
     console.log(newPizza.Size);
@@ -18,6 +19,8 @@ $(document).ready(function(){
   $("form#cheese").submit(function(event){
     event.preventDefault();
     newPizza.Cheese = $("input:radio[name=cheese]:checked").val();
+    $("#show_cheese").remove();
+    $("#choice_made").append("<li id='show_cheese'>Cheese: " + newPizza.showcheese(newPizza.Cheese) + "</li>");
     $("#toppings").show();
     $("#cheese").hide();
     console.log(newPizza.Cheese);
@@ -28,6 +31,8 @@ $(document).ready(function(){
     $(":checkbox:checked").each(function(i){
           newPizza.Toppings[i] = $(this).val();
     });
+    $("#show_toppings").remove();
+    $("#choice_made").append("<li id='show_toppings'>Toppings: " + newPizza.showToppings(  newPizza.Toppings) + "</li>");
     console.log(newPizza.Toppings);
     var price = newPizza.pizzaPrice(newPizza.Size, newPizza.Cheese, newPizza.Toppings);
     $("#result").text("$" + price);
